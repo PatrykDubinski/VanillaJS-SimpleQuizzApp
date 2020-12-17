@@ -1,0 +1,127 @@
+/* Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Semantic Elements */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  align-items: center;
+}
+
+/* Containers */
+
+.container {
+  width: 800px;
+}
+
+/* Question Container */
+
+.container__question {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.container__question-number {
+  text-align: center;
+}
+
+.container__question-number #active__question {
+  font-size: 1.9rem;
+}
+
+.container__question-bar {
+  width: 100%;
+  background-color: blue;
+  height: 3px;
+  border-radius: 4px;
+  margin-bottom: 4rem;
+}
+
+.container__question-number #quetions__length {
+  color: #d8d9e1;
+}
+
+/* Answers Container */
+
+.container__answers {
+  background-color: #1047ff;
+  padding: 1rem 1.5rem;
+}
+
+.container__answers-answer {
+  width: 100%;
+  height: 70px;
+  background-color: #2157ff;
+  margin: 1rem auto;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
+  border-left: 4px solid #fff;
+  z-index: 1;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f1f1f1;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+label {
+  color: #eee;
+  font-size: 1.3rem;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  height: 100%;
+  align-items: center;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+.input:checked + label::after {
+  transform: scaleX(1);
+}
+
+.input:checked + label {
+  color: #2157ff;
+}
+
+.input {
+  visibility: hidden;
+  display: none;
+}
+
+#submitBtn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #000;
+  background-color: #eee;
+  align-items: center;
+}
+
+#submitBtn:focus {
+  outline: none;
+}

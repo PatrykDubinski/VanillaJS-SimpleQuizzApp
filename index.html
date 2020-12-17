@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__question">
+        <p class="container__question-number">
+          <strong id="active__question">1</strong>/<span id="quetions__length"
+            >6</span
+          >
+        </p>
+        <div class="container__question-bar" id="bar"></div>
+        <p id="question" class="question">Kto wygrał Euro 2012?</p>
+      </div>
+      <div class="container__answers">
+        <div class="container__answers-answer">
+          <input class="input" type="radio" name="answer" id="a" />
+          <label for="a" id="a_answer">Polska</label>
+        </div>
+        <div class="container__answers-answer">
+          <input class="input" type="radio" name="answer" id="b" />
+          <label for="b" id="b_answer">Niemcy</label>
+        </div>
+        <div class="container__answers-answer">
+          <input class="input" type="radio" name="answer" id="c" />
+          <label for="c" id="c_answer">Hiszpania</label>
+        </div>
+        <div class="container__answers-answer">
+          <input class="input" type="radio" name="answer" id="d" />
+          <label for="d" id="d_answer">Włochy</label>
+        </div>
+        <button id="submitBtn">Next</button>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
